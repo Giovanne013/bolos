@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardapio</title>
+    <link rel="stylesheet" href="myportf.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="bolos/nome.png">
+
+
+
+</head>
+
+<body>
+
+    <!-- bloco ##1## -->
+    <header>
+        <div class="cabeçalho">
+
+
+        </div>
+        <!--   paragrafo  nav -->
+        <div class="paragrafo">
+
+
+            <div class="stilo">
+                <p class="p1"> <a href="https://wa.me/5513981490694" target="_blank" class="p1">Contato</a>
+                    <i class="fa-brands fa-whatsapp fa-beat fa-xl" style="color:#ec32e6;"></i>
+                </p>
+            </div>
+            <div class="stilo">
+                <p class="p1"><a href="https://www.instagram.com/lariisannt/" class="p1" target="_blank">instagram</a>
+                    <i class="fa-brands fa-instagram fa-beat fa-lg" style="color: #ec32e6;"></i>
+                </p>
+            </div>
+            <div class="stilo">
+                <p class="p1"><a href="https://www.facebook.com/profile.php?id=100022992554139" class="p1"
+                        target="_blank">facebook</a>
+                    <i class="fa-brands fa-facebook fa-beat" style="color: #ec32e6;"></i>
+                </p>
+            </div>
+        </div>
+
+
+        </div> <!--final paragrafo nav-->
+
+    </header>
+
+    <!--Inicio do formulario-->
+    <form id="meuFormulario" action="form.JS" method="post">
+        <div class="conteudo">
+
+            <div>
+                <div class="bolos_img"><img src="bolos/bolocenoura0C.png" alt="" class="bb-o"></div>
+
+                <p id="p-bolos">Cenoura com Chocolate 10,00$</p>
+
+                <input type="number" placeholder=" quantidade+" id="quantidade" name="Cenoura com Chocolate 10,00$"
+                    min="0">
+            </div>
+            <div>
+                <div class="bolos_img"><img src="bolos/bolodepote05.png" alt="" class="bb-o"></div>
+                <p id="p-bolos">Choclate com morango 10,00$</p>
+                <input type="number" placeholder=" quantidade+" id="quantidade" name="Choclate branco 10,00$" min="0">
+            </div>
+
+            <div>
+                <div class="bolos_img"><img src="bolos/bolodepote05.png" alt="" class="bb-o"></div>
+                <p id="p-bolos">Choclate com morango 10,00$</p>
+                <input type="number" placeholder=" quantidade+" id="quantidade" name="Choclate Amargo 10,00$" min="0">
+            </div>
+
+            <div>
+                <div class="bolos_img"><img src="bolos/bolodepote05.png" alt="" class="bb-o"></div>
+                <p id="p-bolos">Choclate com morango 10,00$</p>
+                <input type="number" placeholder=" quantidade+" id="quantidade" name="Choclate com morango 10,00$"
+                    min="0">
+            </div>
+
+            <div>
+                <div class="bolos_img"><img src="bolos/bolodepote06.png" alt="" class="bb-o"></div>
+                <p id="p-bolos">Beijinho com Chocolate 10,00$ </p>
+                <input type="number" placeholder="quantidade+" id="quantidade" name="Beijinho com Chocolate 10$"
+                    min="0">
+            </div>
+
+            <div>
+
+                <div class="bolos_img"><img src="bolos/bolopote0D.png" alt="" class="bb-o"></div>
+
+                <p id="p-bolos">Encomende Do Seu sabor 15,00$</p>
+
+                <input type="checkbox" id="Morango" name="Beijinho com Chocolate 10,00$" value="10">
+                <label for="scales">Beijinho</label>
+
+
+                <input type="checkbox" id="Chocolate" name="Beijinho com Chocolate branco 10,00$">
+                <label for="scales">Cenoura</label>
+
+
+                <input type="checkbox" id="Cenoura" name="Beijinho com morango 10,00$">
+                <label for="scales">morango</label>
+
+                <input type="checkbox" id="Beijinho" name="Beijinho com cenoura 10,00$">
+                <label for="scales">Choclate</label>
+
+
+            </div>
+        </div>
+        <!-- final formulario-->
+
+
+        <!-- botão finalizar -->
+        <div class="botão-enviar" onclick="enviarFormulario()">
+    </form>
+    <input type="button" id="botão" value="Enviar" onclick="enviarFormulario()">
+    <span><i class="fa-solid fa-cart-shopping fa-lg"></i></span>
+    </div>
+    <!--final do botão -->
+
+
+    </form>
+
+
+    <div class="fot-fundo">
+        <footer>
+            <p class="P-footer">&copy; 2023 Lari bolos Since The 2019 </p> </a>
+            <p class="P-footer">Serviços</p>
+            <p class="P-footer">Contato</p>
+            <p class="P-footer">E-mail</p>
+        </footer>
+    </div>
+
+    <script>
+        function enviarFormulario() {
+            localStorage
+            // Obter o formulário e seus dados usando FormData
+            var formulario = document.getElementById('meuFormulario');
+            var dadosFormulario = new FormData(formulario);
+
+            // Exibir dados no console (pode ser enviado para o servidor via AJAX)
+            dadosFormulario.forEach(function (valor, chave) {
+                console.log(chave + ':' + valor);
+            });
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>
